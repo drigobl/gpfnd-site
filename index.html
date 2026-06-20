@@ -1,12 +1,347 @@
-<!DOCTYPE html><html lang="en-gb"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Give Protocol Foundation</title><meta name="generator" content="Publii Open-Source CMS for Static Site"><link rel="canonical" href="https://gpfnd.org/"><link rel="alternate" type="application/atom+xml" href="https://gpfnd.org/feed.xml" title="Give Protocol Foundation - RSS"><link rel="alternate" type="application/json" href="https://gpfnd.org/feed.json" title="Give Protocol Foundation - JSON"><meta property="og:title" content="Give Protocol Foundation"><meta property="og:image" content="https://gpfnd.org/media/website/GPF_Logo_White_transparent.png"><meta property="og:image:width" content="950"><meta property="og:image:height" content="827"><meta property="og:site_name" content="Give Protocol Foundation"><meta property="og:description" content=""><meta property="og:url" content="https://gpfnd.org/"><meta property="og:type" content="website"><link rel="shortcut icon" href="https://gpfnd.org/media/website/android-chrome-192x192.png" type="image/x-icon"><link rel="preload" href="https://gpfnd.org/assets/dynamic/fonts/montserrat/montserrat.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://gpfnd.org/assets/dynamic/fonts/montserrat/montserrat-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://gpfnd.org/assets/dynamic/fonts/instrumentsans/instrumentsans.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="https://gpfnd.org/assets/dynamic/fonts/instrumentsans/instrumentsans-italic.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="https://gpfnd.org/assets/css/style.css?v=f23c695133b01e7861a3a74443bb1830"><script type="application/ld+json">{"@context":"http://schema.org","@type":"Organization","name":"Give Protocol Foundation","logo":"https://gpfnd.org/media/website/GPF_Logo_White_transparent.png","url":"https://gpfnd.org/"}</script><noscript><style>img[loading] {
-                    opacity: 1;
-                }</style></noscript></head><body class="home-template"><header class="top js-header"><a class="logo" href="https://gpfnd.org/"><img src="https://gpfnd.org/media/website/GPF_Logo_White_transparent.png" alt="Give Protocol Foundation" width="950" height="827"></a><nav class="navbar js-navbar"><button class="navbar__toggle js-toggle" aria-label="Menu" aria-haspopup="true" aria-expanded="false"><span class="navbar__toggle-box"><span class="navbar__toggle-inner">Menu</span></span></button><ul class="navbar__menu"><li><a href="https://gpfnd.org/about.html" target="_self">About</a></li><li><a href="https://gpfnd.org/projects.html" target="_self">Projects</a></li><li><a href="https://gpfnd.org/contact-us.html" target="_self">Contact Us</a></li></ul></nav></header><main><div class="hero hero--noimage"><header class="hero__content"><div class="wrapper"><h3><span style="color: #ffffff;">GIVE PROTOCOL FOUNDATION </span></h3><h1> </h1><h1><span style="color: #ffffff;">Building open-source public infrastructure for global philanthropy</span></h1><p> </p><p> </p></div></header></div><div class="wrapper feed"></div></main><footer class="footer"><div class="wrapper"><div class="footer__copyright"><p>Copyright 2026 </p></div><button id="backToTop" class="footer__bttop" aria-label="Back to top" title="Back to top"><svg width="20" height="20"><use xlink:href="https://gpfnd.org/assets/svg/svg-map.svg#toparrow"/></svg></button></div></footer><script defer="defer" src="https://gpfnd.org/assets/js/scripts.min.js?v=dafec4f87fead6718cb125f0b0fc8441"></script><script>window.publiiThemeMenuConfig={mobileMenuMode:'sidebar',animationSpeed:300,submenuWidth: 'auto',doubleClickTime:500,mobileMenuExpandableSubmenus:true,relatedContainerForOverlayMenuSelector:'.top'};</script><script>var images = document.querySelectorAll('img[loading]');
-        for (var i = 0; i < images.length; i++) {
-            if (images[i].complete) {
-                images[i].classList.add('is-loaded');
-            } else {
-                images[i].addEventListener('load', function () {
-                    this.classList.add('is-loaded');
-                }, false);
-            }
-        }</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Give Protocol Foundation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base:#0a191d;
+    --base-2:#0e2227;
+    --surface:#14323a;
+    --surface-2:#193e47;
+    --emerald:#34c77b;
+    --emerald-bright:#49db8e;
+    --emerald-deep:#1f8a55;
+    --ink:#eaf2f0;
+    --muted:#9fb6b3;
+    --faint:#6f8c89;
+    --hair:rgba(255,255,255,0.09);
+    --hair-strong:rgba(255,255,255,0.16);
+    --maxw:1140px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--base);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-family:'Playfair Display',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-0.01em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  .eyebrow{
+    font-size:12px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;
+    color:var(--emerald);
+  }
+
+  /* ---------- nav ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,25,29,0.72);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--hair);
+  }
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Playfair Display',serif;font-size:19px;font-weight:600}
+  .brand svg{flex:none}
+  .navlinks{display:flex;align-items:center;gap:34px}
+  .navlinks a{font-size:14.5px;color:var(--muted);transition:color .2s}
+  .navlinks a:hover{color:var(--ink)}
+  .nav-cta{
+    border:1px solid var(--hair-strong);border-radius:999px;
+    padding:9px 18px;color:var(--ink);font-size:14px;transition:.2s;
+  }
+  .nav-cta:hover{border-color:var(--emerald);color:var(--emerald-bright)}
+  .menu-btn{display:none;background:none;border:0;color:var(--ink);cursor:pointer}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;padding:120px 0 110px;overflow:hidden}
+  .hero-bg{
+    position:absolute;inset:0;z-index:0;
+    background:
+      radial-gradient(900px 520px at 78% -8%, rgba(52,199,123,0.16), transparent 60%),
+      radial-gradient(700px 600px at 8% 110%, rgba(31,138,85,0.14), transparent 60%),
+      linear-gradient(180deg,var(--base-2),var(--base));
+  }
+  .stem{position:absolute;left:max(28px,calc((100% - var(--maxw))/2 + 28px));top:96px;bottom:60px;width:2px;z-index:1}
+  .stem .line{
+    position:absolute;left:0;top:0;width:2px;height:100%;
+    background:linear-gradient(180deg,var(--emerald),transparent);
+    transform-origin:top;transform:scaleY(0);
+    animation:grow 1.6s cubic-bezier(.22,.61,.36,1) .2s forwards;
+  }
+  .stem .leaf{
+    position:absolute;left:-4px;top:38%;width:10px;height:10px;border-radius:0 60% 0 60%;
+    background:var(--emerald-bright);opacity:0;
+    transform:rotate(45deg) scale(0);
+    animation:pop .5s ease 1.5s forwards;
+    box-shadow:0 0 14px rgba(73,219,142,.6);
+  }
+  @keyframes grow{to{transform:scaleY(1)}}
+  @keyframes pop{to{opacity:1;transform:rotate(45deg) scale(1)}}
+
+  .hero-inner{position:relative;z-index:2;max-width:880px}
+  .hero h1{font-size:clamp(40px,6.2vw,72px);margin:22px 0 26px}
+  .hero h1 em{font-style:italic;color:var(--emerald-bright)}
+  .hero p.lede{font-size:clamp(17px,2.1vw,21px);color:var(--muted);max-width:680px}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;border-radius:999px;
+    padding:14px 26px;font-size:15px;font-weight:600;transition:.2s;cursor:pointer;
+  }
+  .btn-primary{background:var(--emerald);color:#06211a}
+  .btn-primary:hover{background:var(--emerald-bright);transform:translateY(-1px)}
+  .btn-ghost{border:1px solid var(--hair-strong);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--emerald)}
+  .btn svg{transition:transform .2s}
+  .btn:hover svg{transform:translateX(3px)}
+
+  /* ---------- thesis strip ---------- */
+  .thesis{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);background:var(--base-2)}
+  .thesis .wrap{padding-top:64px;padding-bottom:64px}
+  .thesis p{font-family:'Playfair Display',serif;font-size:clamp(22px,3vw,30px);line-height:1.35;max-width:920px;color:var(--ink)}
+  .thesis p span{color:var(--faint)}
+
+  /* ---------- section frame ---------- */
+  section.block{padding:96px 0}
+  .sec-head{max-width:680px;margin-bottom:48px}
+  .sec-head h2{font-size:clamp(28px,3.6vw,40px);margin:16px 0 14px}
+  .sec-head p{color:var(--muted);font-size:16.5px}
+
+  /* ---------- portfolio ---------- */
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{
+    position:relative;border:1px solid var(--hair);border-radius:18px;
+    background:linear-gradient(165deg,var(--surface),var(--base-2));
+    padding:30px 28px 32px;transition:.25s;overflow:hidden;display:flex;flex-direction:column;
+  }
+  .card:hover{border-color:rgba(52,199,123,0.45);transform:translateY(-3px)}
+  .card::after{
+    content:"";position:absolute;inset:0;border-radius:18px;pointer-events:none;
+    background:radial-gradient(420px 200px at 100% 0%,rgba(52,199,123,0.10),transparent 60%);
+    opacity:0;transition:opacity .25s;
+  }
+  .card:hover::after{opacity:1}
+  .card .top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;margin-bottom:14px}
+  .card h3{font-size:23px}
+  .tag{flex:none;font-size:10.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border-radius:999px;white-space:nowrap}
+  .tag.live{background:rgba(52,199,123,0.14);color:var(--emerald-bright);border:1px solid rgba(52,199,123,0.3)}
+  .tag.dev{background:rgba(255,255,255,0.05);color:var(--muted);border:1px solid var(--hair)}
+  .card .role{font-size:13px;color:var(--emerald);font-weight:600;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:14.5px}
+
+  /* ---------- approach ---------- */
+  .approach{background:var(--base-2);border-top:1px solid var(--hair)}
+  .principles{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+  .principle{padding:30px 34px;border-top:1px solid var(--hair)}
+  .principle:nth-child(odd){border-right:1px solid var(--hair)}
+  .principle .lbl{display:flex;align-items:center;gap:11px;font-family:'Playfair Display',serif;font-size:20px;margin-bottom:10px}
+  .principle .lbl::before{content:"";width:8px;height:8px;border-radius:0 55% 0 55%;background:var(--emerald);transform:rotate(45deg);flex:none}
+  .principle p{color:var(--muted);font-size:15px}
+
+  /* ---------- get involved ---------- */
+  .cta-band{position:relative;border-radius:24px;overflow:hidden;border:1px solid var(--hair);
+    background:linear-gradient(150deg,var(--surface-2),var(--base-2));padding:64px 56px}
+  .cta-band::before{content:"";position:absolute;inset:0;
+    background:radial-gradient(600px 300px at 90% 10%,rgba(52,199,123,0.16),transparent 60%);pointer-events:none}
+  .cta-band .inner{position:relative;max-width:640px}
+  .cta-band h2{font-size:clamp(28px,3.6vw,40px);margin:14px 0 16px}
+  .cta-band p{color:var(--muted);font-size:16.5px;margin-bottom:30px}
+  .cta-rows{display:flex;flex-wrap:wrap;gap:14px}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--hair);padding:54px 0 40px;margin-top:20px}
+  .foot{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+  .foot .brand{margin-bottom:14px}
+  .foot p{color:var(--faint);font-size:13.5px;max-width:320px}
+  .foot-links{display:flex;gap:54px;flex-wrap:wrap}
+  .foot-col h4{font-family:'Inter',sans-serif;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:600;margin-bottom:14px}
+  .foot-col a{display:block;color:var(--muted);font-size:14px;margin-bottom:9px;transition:color .2s}
+  .foot-col a:hover{color:var(--emerald-bright)}
+  .copy{margin-top:42px;padding-top:22px;border-top:1px solid var(--hair);color:var(--faint);font-size:13px}
+
+  /* ---------- reveal ---------- */
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  @media(max-width:860px){
+    .navlinks{display:none}
+    .menu-btn{display:block}
+    .grid{grid-template-columns:1fr}
+    .principles{grid-template-columns:1fr}
+    .principle:nth-child(odd){border-right:0}
+    .cta-band{padding:44px 28px}
+    section.block{padding:72px 0}
+  }
+  @media(prefers-reduced-motion:reduce){
+    *{animation:none!important}
+    .reveal{opacity:1;transform:none}
+    .stem .line{transform:scaleY(1)}.stem .leaf{opacity:1;transform:rotate(45deg) scale(1)}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#top">
+      <img src="https://giveprotocol.io/give_logo_gradient.svg" alt="Give Protocol" width="26" height="26" style="display:block">
+      Give Protocol Foundation
+    </a>
+    <div class="navlinks">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#approach">Approach</a>
+      <a class="nav-cta" href="#involved">Get involved</a>
+    </div>
+    <button class="menu-btn" aria-label="Menu">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </nav>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="stem"><div class="line"></div><div class="leaf"></div></div>
+    <div class="wrap hero-inner">
+      <span class="eyebrow">Give Protocol Foundation</span>
+      <h1>We build the infrastructure philanthropy needs and <em>no one owns.</em></h1>
+      <p class="lede">A 501(c)(3) public-goods venture studio making open-source bets at the intersection of giving and technology — where domain expertise, public-good values, and volunteer leadership converge.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#portfolio">See the portfolio
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <a class="btn btn-ghost" href="#involved">Board &amp; partnerships</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THESIS -->
+  <div class="thesis">
+    <div class="wrap">
+      <p>Most tools at the edge of technology and social good get built for capture — optimized for shareholders, sold on fees, retired when the market turns. <span>We build the opposite: open-source infrastructure governed for the commons, designed to outlast any single product, and free for the entire sector to use.</span></p>
+    </div>
+  </div>
+
+  <!-- PORTFOLIO -->
+  <section class="block" id="portfolio">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">The Portfolio</span>
+        <h2>Independent products, one shared discipline.</h2>
+        <p>Each product addresses a distinct infrastructure gap. They share values, governance, and a refusal to compromise mission for revenue — nothing else.</p>
+      </div>
+      <div class="grid">
+        <div class="card reveal">
+          <div class="top"><h3>Give Protocol</h3><span class="tag live">Flagship · Testnet</span></div>
+          <div class="role">Transparent crypto donations</div>
+          <p>Low-cost, fully traceable giving that moves internationally in minutes — built so any verified nonprofit can receive funds, including those without traditional banking access.</p>
+        </div>
+        <div class="card reveal">
+          <div class="top"><h3>Pacioli</h3><span class="tag dev">In development</span></div>
+          <div class="role">Professional crypto accounting</div>
+          <p>Open-source, chain-agnostic, double-entry accounting for the multi-chain era — enterprise-grade depth with a free, self-hostable core.</p>
+        </div>
+        <div class="card reveal">
+          <div class="top"><h3>Volo Index</h3><span class="tag dev">Early</span></div>
+          <div class="role">Volunteer leadership fluency</div>
+          <p>A conversational assessment measuring volunteer-management and leadership competency, grounded in two decades of sector practice rather than borrowed frameworks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="block approach" id="approach">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <span class="eyebrow">How we choose what to build</span>
+        <h2>A short list of things we won't compromise.</h2>
+        <p>We pursue a new product only when every one of these holds. If any is missing, we wait — sunk effort is never a reason to keep going.</p>
+      </div>
+      <div class="principles reveal">
+        <div class="principle">
+          <div class="lbl">Public good first</div>
+          <p>A real infrastructure gap in a market that's underserved or genuinely disruptable — not a marginal improvement to something already well served.</p>
+        </div>
+        <div class="principle">
+          <div class="lbl">Open by default</div>
+          <p>Buildable on open-source, community-first principles. If it only works through closed code or extractive monetization, it doesn't belong here.</p>
+        </div>
+        <div class="principle">
+          <div class="lbl">Domain-led</div>
+          <p>A volunteer leader with genuine expertise and energy to carry it through the gap between concept and traction. Not founder hubris.</p>
+        </div>
+        <div class="principle">
+          <div class="lbl">Sustainable, not extractive</div>
+          <p>A credible path to covering its own costs — visible even if not immediate — that never asks the mission to bend toward revenue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET INVOLVED -->
+  <section class="block" id="involved">
+    <div class="wrap">
+      <div class="cta-band reveal">
+        <div class="inner">
+          <span class="eyebrow">Get involved</span>
+          <h2>Help govern a new model of giving.</h2>
+          <p>We're building toward a working board, partnering with mission-aligned nonprofits, and seeking ecosystem and philanthropic funders who back open-source public goods. Skeptical but curious perspectives welcome.</p>
+          <div class="cta-rows">
+            <a class="btn btn-primary" href="mailto:info@giveprotocol.io">Start a conversation
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="https://giveprotocol.io">Visit Give Protocol</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top">
+          <img src="https://giveprotocol.io/give_logo_gradient.svg" alt="Give Protocol" width="24" height="24" style="display:block">
+          Give Protocol Foundation
+        </a>
+        <p>Open-source public infrastructure for global philanthropy. A 501(c)(3) nonprofit incorporated in Delaware, USA.</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>Portfolio</h4>
+          <a href="https://giveprotocol.io">Give Protocol</a>
+          <a href="#portfolio">Pacioli</a>
+          <a href="#portfolio">Volo Index</a>
+        </div>
+        <div class="foot-col">
+          <h4>Foundation</h4>
+          <a href="#approach">Approach</a>
+          <a href="#involved">Board &amp; partnerships</a>
+          <a href="mailto:info@giveprotocol.io">Contact</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">© 2026 Give Protocol Foundation. Built for the commons.</div>
+  </div>
+</footer>
+
+<script>
+  const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:0.16});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
