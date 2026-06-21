@@ -151,10 +151,16 @@
     background:linear-gradient(150deg,var(--surface-2),var(--base-2));padding:64px 56px}
   .cta-band::before{content:"";position:absolute;inset:0;
     background:radial-gradient(600px 300px at 90% 10%,rgba(52,199,123,0.16),transparent 60%);pointer-events:none}
-  .cta-band .inner{position:relative;max-width:640px}
+  .cta-band .inner{position:relative;max-width:880px}
   .cta-band h2{font-size:clamp(28px,3.6vw,40px);margin:14px 0 16px}
-  .cta-band p{color:var(--muted);font-size:16.5px;margin-bottom:30px}
+  .cta-band > .inner > p{color:var(--muted);font-size:16.5px;margin-bottom:30px}
+  .cta-ways{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:8px 0 34px;padding:0}
+  .cta-ways li{padding:22px 22px 20px;border:1px solid var(--hair);border-radius:14px;background:rgba(255,255,255,0.02);transition:.2s}
+  .cta-ways li:hover{border-color:rgba(52,199,123,0.4);background:rgba(52,199,123,0.04)}
+  .cta-ways h4{font-family:'Playfair Display',serif;font-weight:600;font-size:18px;color:var(--ink);margin-bottom:8px;letter-spacing:-0.005em}
+  .cta-ways p{color:var(--muted);font-size:14px;line-height:1.55;margin:0}
   .cta-rows{display:flex;flex-wrap:wrap;gap:14px}
+  @media(max-width:860px){.cta-ways{grid-template-columns:1fr}}
 
   /* ---------- footer ---------- */
   footer{border-top:1px solid var(--hair);padding:54px 0 40px;margin-top:20px}
@@ -298,8 +304,22 @@
       <div class="cta-band reveal">
         <div class="inner">
           <span class="eyebrow">Get involved</span>
-          <h2>Help govern a new model of giving.</h2>
-          <p>We're building toward an independent board of 5–7 members — a working board where members contribute professional expertise directly, not oversight only. We're also partnering with mission-aligned nonprofits and seeking ecosystem and philanthropic funders who back open-source public goods. Skeptical but curious perspectives welcome.</p>
+          <h2>Help build the infrastructure.</h2>
+          <p>We are scaling our ecosystem and looking for collaborative partners who value transparency, open-source public goods, and systemic impact. Skeptical but curious perspectives are always welcome.</p>
+          <ul class="cta-ways">
+            <li>
+              <h4>Join Our Governance</h4>
+              <p>We are building a working board of 5–7 independent members to actively contribute specialized professional expertise, moving beyond traditional passive oversight.</p>
+            </li>
+            <li>
+              <h4>Partner With Us</h4>
+              <p>We are looking to collaborate with mission-aligned nonprofits ready to implement next-generation philanthropic infrastructure.</p>
+            </li>
+            <li>
+              <h4>Back the Protocol</h4>
+              <p>We invite ecosystem and philanthropic funders who believe in building robust, open-source public utilities for the social sector.</p>
+            </li>
+          </ul>
           <div class="cta-rows">
             <a class="btn btn-primary" href="mailto:info@giveprotocol.io">Start a conversation
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
