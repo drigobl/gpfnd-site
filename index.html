@@ -141,9 +141,9 @@
 
   /* ---------- approach ---------- */
   .approach{background:var(--base-2);border-top:1px solid var(--hair)}
-  .principles{display:grid;grid-template-columns:repeat(2,1fr);gap:0}
+  .principles{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
   .principle{padding:30px 34px;border-top:1px solid var(--hair)}
-  .principle:nth-child(odd){border-right:1px solid var(--hair)}
+  .principle:not(:last-child){border-right:1px solid var(--hair)}
   .principle .lbl{display:flex;align-items:center;gap:11px;font-family:'Playfair Display',serif;font-size:20px;margin-bottom:10px}
   .principle .lbl::before{content:"";width:8px;height:8px;border-radius:0 55% 0 55%;background:var(--emerald);transform:rotate(45deg);flex:none}
   .principle p{color:var(--muted);font-size:15px}
@@ -184,7 +184,7 @@
     .menu-btn{display:block}
     .grid{grid-template-columns:1fr}
     .principles{grid-template-columns:1fr}
-    .principle:nth-child(odd){border-right:0}
+    .principle:not(:last-child){border-right:0}
     .cta-band{padding:44px 28px}
     section.block{padding:72px 0}
   }
@@ -222,8 +222,9 @@
     <div class="stem"><div class="line"></div><div class="leaf"></div></div>
     <div class="wrap hero-inner">
       <span class="eyebrow">Give Protocol Foundation</span>
-      <h1>Building open-source infrastructure for <em>transparent global philanthropy.</em></h1>
-      <p class="lede">The global charitable sector moves $500B+ annually. A significant share is lost to transfer fees, currency conversion, and access gaps that exclude the organizations doing the hardest work from international funding flows entirely. We build the tools to fix that.</p>
+      <h1>The rails for global giving shouldn't decide <em>who gets to receive it.</em></h1>
+      <p class="lede">The global charitable sector moves hundreds of billions of dollars each year, yet the underlying infrastructure has not kept pace. Traditional funding flows remain fragmented by high cross-border fees, slow settlement times, and access barriers that leave the organizations closest to their communities on the periphery. At the same time, the volunteer labor and human dedication that sustain local efforts are rarely recognized alongside financial capital.</p>
+      <p class="lede">We build and support open-source, compliant digital tools designed to expand access, ensure transparent stewardship, and restore direct agency to communities and donors worldwide.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="#portfolio">See the portfolio
           <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
@@ -236,7 +237,9 @@
   <!-- THESIS -->
   <div class="thesis">
     <div class="wrap">
-      <p>These friction costs — 4–12% lost to transfer fees, 3–10 days for funds to arrive, organizations without traditional banking excluded from international flows entirely — don't just reduce efficiency. <span>They shape which causes receive funding and which organizations can participate in global philanthropy at all. We build open-source infrastructure to change that, for the entire sector, not just our balance sheet.</span></p>
+      <p>Friction costs are more than an operational expense—they are an access barrier.</p>
+      <p>When 4–12% of a cross-border contribution is absorbed by transfer fees, when funds take days or weeks to settle, or when community-level organizations lack access to traditional correspondent banking, the entire sector is constrained. <span>These structural inefficiencies inadvertently dictate which causes receive resources and which communities can participate.</span></p>
+      <p><span>We believe that public giving should be as open, direct, and verifiable as the modern web. The Give Protocol Foundation stewards open public goods that reduce operational friction, ensure rigorous accountability, and connect participants directly to ground-level impact.</span></p>
     </div>
   </div>
 
@@ -245,24 +248,24 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <span class="eyebrow">The Portfolio</span>
-        <h2>Independent products, one shared discipline.</h2>
-        <p>Each product addresses a distinct infrastructure gap. They share values, governance, and a refusal to compromise mission for revenue — nothing else.</p>
+        <h2>Independent open tools, one shared commitment to public stewardship.</h2>
+        <p>Each initiative addresses a specific gap in the philanthropic lifecycle — from how capital moves, to how impact is accounted for, to how human contribution is recognized and supported.</p>
       </div>
       <div class="grid">
         <div class="card reveal">
           <div class="top"><h3>Give Protocol</h3><span class="tag live">Flagship · Testnet</span></div>
-          <div class="role">Transparent crypto donations</div>
-          <p>Low-cost, fully traceable giving that moves internationally in minutes. All recipient organizations are rigorously verified — US 501(c)(3) status confirmed via IRS databases, equivalency determination applied for international entities — so donors know their funds reach legitimate organizations, including those without traditional banking access.</p>
+          <div class="role">Direct, compliant cross-border philanthropic rails</div>
+          <p>Low-cost, traceable transfer infrastructure that moves resources globally in minutes. Give Protocol pairs the velocity of open networks with established legal standards — incorporating verifiable 501(c)(3) status and international equivalency frameworks — ensuring donors can support legitimate, front-line initiatives directly, including those historically excluded by legacy banking barriers.</p>
         </div>
         <div class="card reveal">
-          <div class="top"><h3>Pacioli</h3><span class="tag dev">In development</span></div>
-          <div class="role">Professional crypto accounting</div>
-          <p>Open-source, chain-agnostic, double-entry accounting for the multi-chain era — enterprise-grade depth with a free, self-hostable core.</p>
+          <div class="top"><h3>Pacioli</h3><span class="tag dev">In Active Development</span></div>
+          <div class="role">Open-source, verifiable financial accounting</div>
+          <p>Enterprise-grade, double-entry accounting software designed for the multi-chain and multi-currency era. Pacioli provides civil society organizations, treasuries, and nonprofits with self-hostable, transparent financial tooling — ensuring organizational stewardship is provable, auditable, and grounded in standard accounting discipline rather than retrospective reporting.</p>
         </div>
         <div class="card reveal">
-          <div class="top"><h3>Volo Index</h3><span class="tag dev">Early</span></div>
-          <div class="role">Volunteer leadership fluency</div>
-          <p>A conversational assessment measuring volunteer-management and leadership competency, grounded in two decades of sector practice rather than borrowed frameworks.</p>
+          <div class="top"><h3>Volo Index</h3><span class="tag dev">Early Stage</span></div>
+          <div class="role">Recognizing volunteer leadership and community capacity</div>
+          <p>A diagnostic and development framework measuring volunteer-management and operational competency. Built on the belief that a healthy civil society runs on human dedication as much as capital, Volo Index provides organizations with the tools to cultivate, assess, and honor the vital sweat equity that powers community resilience.</p>
         </div>
       </div>
     </div>
@@ -272,30 +275,26 @@
   <section class="block approach" id="approach">
     <div class="wrap">
       <div class="sec-head reveal">
-        <span class="eyebrow">How we choose what to build</span>
-        <h2>A short list of things we won't compromise.</h2>
-        <p>We pursue a new product only when every one of these holds. If any is missing, we wait — sunk effort is never a reason to keep going. Measured growth with compliance-first priorities: we'd rather move carefully and build trust than scale prematurely.</p>
+        <span class="eyebrow">How We Build: Foundation Principles</span>
+        <h2>A measured, public-good approach to technology.</h2>
+        <p>We pursue new tools only when they meet clear standards of sector utility and long-term viability. We favor measured, compliance-first progress over rapid expansion, working to build trust across both traditional institutions and open-source communities.</p>
       </div>
       <div class="principles reveal">
         <div class="principle">
-          <div class="lbl">Public good first</div>
-          <p>A real infrastructure gap in a market that's underserved or genuinely disruptable — not a marginal improvement to something already well served.</p>
+          <div class="lbl">Public Good First</div>
+          <p>We focus strictly on structural infrastructure gaps where traditional markets have left communities underserved, building utilities that belong to the sector rather than a single entity.</p>
         </div>
         <div class="principle">
-          <div class="lbl">Open by default</div>
-          <p>Buildable on open-source, community-first principles. If it only works through closed code or extractive monetization, it doesn't belong here.</p>
+          <div class="lbl">Compliance &amp; Trust by Design</div>
+          <p>Innovation is most powerful when it works constructively within regulatory and legal frameworks. We build with established accounting standards, verifiable verification, and institutional rigor from day one.</p>
         </div>
         <div class="principle">
-          <div class="lbl">Domain-led</div>
-          <p>A volunteer leader with genuine expertise and energy to carry it through the gap between concept and traction. Not founder hubris.</p>
-        </div>
-        <div class="principle">
-          <div class="lbl">Sustainable, not extractive</div>
-          <p>A credible path to covering its own costs — visible even if not immediate — that never asks the mission to bend toward revenue.</p>
+          <div class="lbl">Sustainable Stewardship</div>
+          <p>We design systems with clear operational pathways that can cover their own maintenance without compromising our nonprofit mission or imposing tollbooths on the communities we serve.</p>
         </div>
       </div>
       <div class="reveal" style="margin-top:48px;padding:32px 34px;border:1px solid var(--hair);border-radius:18px;background:linear-gradient(165deg,var(--surface),var(--base-2))">
-        <p style="font-family:'Playfair Display',serif;font-size:clamp(18px,2.2vw,22px);line-height:1.4;color:var(--ink)">"We're building public infrastructure for philanthropy — tools that any nonprofit can use, open-source, transparent, and grounded in sector best practices."</p>
+        <p style="font-family:'Playfair Display',serif;font-size:clamp(18px,2.2vw,22px);line-height:1.4;color:var(--ink)">"We are building public infrastructure for the future of giving — tools that any nonprofit or community can use, open-source by design, transparent by default, and deeply grounded in sector best practices."</p>
       </div>
     </div>
   </section>
@@ -310,8 +309,8 @@
           <p>We are scaling our ecosystem and looking for collaborative partners who value transparency, open-source public goods, and systemic impact. Skeptical but curious perspectives are always welcome.</p>
           <ul class="cta-ways">
             <li>
-              <h4>Join Our Governance</h4>
-              <p>We are building a working board of 5–7 independent members to actively contribute specialized professional expertise, moving beyond traditional passive oversight.</p>
+              <h4>Build With Us</h4>
+              <p>Public infrastructure is built by the people who care to maintain it. We are always looking to connect with individuals across legal compliance, open-source development, and civil society operations who want to lend their perspective and experience to our mission.</p>
             </li>
             <li>
               <h4>Partner With Us</h4>
